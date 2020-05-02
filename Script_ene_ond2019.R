@@ -7,7 +7,7 @@ library(survey)
 library(srvyr)
 library(dplyr)
 library(car)
-library("xlsx")
+library("xlsx") 
 
 # Es recomendable tener a la vista el "Libro de codigos base de la ENE año 2019" 
 # En "Metodologías" desde la página web https://www.ine.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion
