@@ -20,7 +20,6 @@ Luego, desde la planilla de cálculo se extrajo una serie de tablas:
 #### Principales resultados de actividad económica:
 
 ![caenes](https://raw.githubusercontent.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/master/docs/caenes.png)
-
 ![tabla4-5](https://raw.githubusercontent.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/master/docs/tabla4-5.png)
 
 Por último el script utilizado esta disponible en mi repositorio [Script_ene_ond2019.R](https://github.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/blob/master/Script_ene_ond2019.R).
