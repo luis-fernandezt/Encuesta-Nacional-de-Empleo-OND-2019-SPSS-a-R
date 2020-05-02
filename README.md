@@ -4,7 +4,7 @@ En este repositorio puede encontrar un script en lenguaje R, el cual permitirá 
 ![spss](https://raw.githubusercontent.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/master/icono/sav.png)    **->** ![r](https://github.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/blob/master/icono/r.png)    **->** ![xlsx](https://raw.githubusercontent.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/master/icono/xls.png)
 
 ## Análisis trimestre móvil OND2019 ENE
->Al analizar los datos se debe poner atención en aplicar factor de expansión a la muestra, y tener especial cuidado en que NO todos los resultados son consistentes estadísticamente, debido a que presentan un altos coeficientes de variación.
+>Al analizar los datos se debe poner atención en aplicar factor de expansión a la muestra, y tener especial cuidado en que NO todos los resultados son consistentes estadísticamente, debido a que presentan altos coeficientes de variación.
 Brevemente y según lo señalado en el manual metodológico de la encuesta, solo aquellos valores con cv <= 0,15 son aceptables, mientras que aquellos con cv mayores están sujetos a alta variabilidad muestral y error de estimación, por lo cual deberían agruparse para mejorar este valor.
 
 La encuesta caracteriza la población dentro y fuera del mercado del trabajo, para este ejercicio se tomó como referencia la décima región de Los Lagos, en específico al trimestre móvil octubre-diciembre 2019. De esta manera primero se presenta un organigrama con los principales resultados:
