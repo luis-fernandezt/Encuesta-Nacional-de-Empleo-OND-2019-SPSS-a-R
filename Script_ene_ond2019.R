@@ -12,17 +12,18 @@ library("xlsx")
 # Es recomendable tener a la vista el "Libro de codigos base de la ENE año 2019" 
 # En "Metodologías" desde la página web https://www.ine.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion
 # Página 19, Construcción de principales indicadores
-# Descargamos en la carpeta de trabajo con el siguiente código:
 
-download.file(
-  url = "http://www.ine.cl/docs/default-source/ocupacion-y-desocupacion/metodologia/espanol/libro-de-c%C3%B3digos-base-ene-2019.pdf?sfvrsn=aeb43f99_3", 
-  destfile = "libro-de-códigos-base-ene-2019.pdf"
-)
+# Descargamos en la carpeta de trabajo con el siguiente código (1.4 MB)
+download.file("http://www.ine.cl/docs/default-source/ocupacion-y-desocupacion/metodologia/espanol/libro-de-c%C3%B3digos-base-ene-2019.pdf?sfvrsn=aeb43f99_3", "libro-de-códigos-base-ene-2019.pdf", mode="wb")
 
 # Cargamos la base de datos Encuesta Nacional de Empleo (ENE), trimestre móvil OND2019
 # Se puede encontrar "Bases de datos" de otros periodos en estadísticas del Mercado Laboral en la misma web
 # En este ejercicio se analizará solo un trimestre móvil Octubre-Diciembre 2019
 
+# se puede descargar (124.9 MB)
+download.file("http://www.ine.cl/docs/default-source/ocupacion-y-desocupacion/bbdd/2019/formato-spss/ene-2019-11.sav?sfvrsn=38b27080_6&download=true", "ond2019.sav", mode="wb")
+
+# o cargar directamente desde el repositorio de la web INE
 ond2019 <- read_sav("http://www.ine.cl/docs/default-source/ocupacion-y-desocupacion/bbdd/2019/formato-spss/ene-2019-11.sav?sfvrsn=38b27080_6&download=true")
 View(ond2019) #vista previa de la base de datos
 
@@ -47,13 +48,11 @@ ond2019_r10 <- mutate(ond2019_r10, fdt = car::recode(ond2019_r10$cae_especifico,
 ond2019_r10 <- mutate(ond2019_r10, inactivos = car::recode(ond2019_r10$cae_especifico, "10:28=1; else = NA"))
 
 ond2019_r10 <- within(ond2019_r10, { #Recodificamos etiquetas de sexo
-  sexo <- Recode(sexo, '1="hombres"; 2="mujeres"', as.factor=TRUE)
-})
+  sexo <- Recode(sexo, '1="hombres"; 2="mujeres"', as.factor=TRUE)})
 
 names(ond2019_r10)
-View(ond2019_r10)
 
-# Aplicamos el factor de expansión a la muestra
+# Aplicamos el factor de expansión a la muestra crendo nuestro 
 # *Los nombres de los factores, así como estrato e id pueden haber cambiado en versiones posteriores de la ENE
 svydsgn <- ond2019_r10 %>% as_survey_design(weights = fact,
                                             strata = estrato,
@@ -86,7 +85,7 @@ to <- svytotal(~o+sexo, svydsgn, na.rm = TRUE)/ #tasa ocupacion
   svytotal(~pet+sexo, svydsgn,na.rm = TRUE)
 
 tp <- svytotal(~fdt+sexo, svydsgn, na.rm = TRUE)/ #tasa participacion
-  svytotal(~pet+sexo, svydsgn,na.rm = TRUE)
+  svytotal(~pet+sexo, svydsgn,na.rm = TRUE) 
 
 # Principales Indicadores Actividad Económica 
 # Respecto al coeficiente de variación, si CV <= 0,15 aceptable; si 0,15 < CV <= 0,30 poco fiable
@@ -102,6 +101,9 @@ cise <- svyby(~o+sexo, ~categoria_ocupacion,svydsgn, svytotal, na.rm = TRUE, var
 #Clasificación Internacional Uniforme de Ocupaciones CIUO -08
 ciuo <- svyby(~o+sexo, ~b1, svydsgn, svytotal, na.rm = TRUE, vartype="cv")
 
+ond2019_r10$b14_rev4cl_caenes
+ond2019_r10$categoria_ocupacion
+ond2019_r10$b1
 
 # Opcionalmente se pueden exportar todos los resultados a un único archivo *.xlsx
 # *archivo de salida básico sin ajustes de estilo*
@@ -183,5 +185,47 @@ write.xlsx(cise,
 write.xlsx(ciuo, 
            file = "Principales_Indicadores_OND_2019.xlsx", 
            sheetName = "ciuo-08", 
+           append = T)
+
+#######################################
+#vista regional macro - poblacion total
+pobl <- filter(ond2019, region == 10)
+pobl <- mutate(pobl, poblacion = car::recode(pobl$cae_especifico, "0:28=1; else = NA"))
+pobl <- mutate(pobl, menor15 = car::recode(pobl$cae_especifico, "0=1; else = NA"))
+pobl <- mutate(pobl, pet = car::recode(pobl$cae_especifico, "1:28=1; else = NA"))
+pobl <- within(pobl, {sexo <- Recode(sexo, '1="hombres"; 2="mujeres"', as.factor=TRUE)})                                                               
+svydsgn_pobl <- pobl %>% as_survey_design(weights = fact, strata = estrato, ids = id_directorio)
+
+ # poblacion total
+pob_tot <- svytotal(~poblacion, svydsgn_pobl,na.rm = TRUE)
+pob_tot_s <- svyby(~poblacion, ~sexo, svydsgn_pobl, svytotal, na.rm = TRUE, vartype="cv")
+
+ # menores de 15 años
+menor15 <- svytotal(~menor15, svydsgn_pobl,na.rm = TRUE)
+menor15_s <- svyby(~menor15, ~sexo, svydsgn_pobl, svytotal, na.rm = TRUE, vartype="cv")
+
+ # pet - para control, ya calculado*.
+svytotal(~pet, svydsgn_pobl,na.rm = TRUE)
+svyby(~pet, ~sexo, svydsgn_pobl, svytotal, na.rm = TRUE, vartype="cv")
+
+# guardamos como nuevas pestañas en planilla excel 
+write.xlsx(pob_tot, 
+           file = "Principales_Indicadores_OND_2019.xlsx", 
+           sheetName = "pob_tot",  
+           append = T)
+
+write.xlsx(pob_tot_s, 
+           file = "Principales_Indicadores_OND_2019.xlsx", 
+           sheetName = "pob_tot_s", 
+           append = T)
+
+write.xlsx(menor15, 
+           file = "Principales_Indicadores_OND_2019.xlsx", 
+           sheetName = "menor15", 
+           append = T)
+
+write.xlsx(menor15_s, 
+           file = "Principales_Indicadores_OND_2019.xlsx", 
+           sheetName = "menor15_s", 
            append = T)
 
