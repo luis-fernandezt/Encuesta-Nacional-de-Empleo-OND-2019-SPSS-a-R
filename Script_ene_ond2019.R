@@ -52,7 +52,7 @@ ond2019_r10 <- within(ond2019_r10, { #Recodificamos etiquetas de sexo
 
 names(ond2019_r10)
 
-# Aplicamos el factor de expansión a la muestra crendo nuestro 
+# Aplicamos el factor de expansión a la muestra
 # *Los nombres de los factores, así como estrato e id pueden haber cambiado en versiones posteriores de la ENE
 svydsgn <- ond2019_r10 %>% as_survey_design(weights = fact,
                                             strata = estrato,
