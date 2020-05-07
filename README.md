@@ -27,9 +27,10 @@ Luego, desde la planilla de cálculo se extrajo una serie de tablas:
 | Ocupados                        |    444,29   |  271,38 |  172,91 |
 | Desocupados                     |    15,82    |   7,72  |   8,11  |
 | Inactivos                       |    326,53   |  123,96 |  202,57 |
+
 Fuente: Elaboración propia
 
-#### * **Tabla 2.  Los Lagos, principales tasas**
+#### **Tabla 2.  Los Lagos, principales tasas**
 
 | OND2019                 | Ambos sexos | Hombres | Mujer  |
 |-------------------------|:-----------:|:-------:|:------:|
@@ -100,9 +101,9 @@ Fuente: Elaboración propia.
 | Ocupaciones   elementales                                                       |     8,95    | 0,06 |  60,97  | 0,07 |  42,13  | 0,08 |
 | Otros no   identificados                                                        |     8,95    | 0,44 |   1,77  | 0,44 |   0,15  | 0,79 |
 
-Fuente: Elaboración propia.
+Elaboración propia.
 
 Por último el script utilizado esta disponible en mi repositorio [Script_ene_ond2019.R](https://github.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/blob/master/Script_ene_ond2019.R).
 
-##### **Versión de Rstudio:**
+#### **Versión de Rstudio:**
 "R version 3.6.3 (2020-02-29)"
