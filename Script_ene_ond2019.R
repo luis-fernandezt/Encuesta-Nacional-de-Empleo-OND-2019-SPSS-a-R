@@ -2,12 +2,16 @@
 #install.packages("haven", "tidyverse", "survey", "srvyr", "dplyr", "car","xlsx")
 
 library(haven) #Cargamos las librerias
+
 library(tidyverse)
+library(car)
+
 library(survey)
 library(srvyr)
-library(dplyr)
-library(car)
-library("xlsx") 
+
+library("xlsx")  
+
+
 
 # Es recomendable tener a la vista el "Libro de codigos base de la ENE año 2019" 
 # En "Metodologías" desde la página web https://www.ine.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion
@@ -87,6 +91,9 @@ to <- svytotal(~o+sexo, svydsgn, na.rm = TRUE)/ #tasa ocupacion
 tp <- svytotal(~fdt+sexo, svydsgn, na.rm = TRUE)/ #tasa participacion
   svytotal(~pet+sexo, svydsgn,na.rm = TRUE) 
 
+svyratio(~d, ~fdt, design=svydsgn, na.rm=T, covmat=T, dstrat)
+svyratio.survey.design2(~d, ~fdt, design=svydsgn)
+
 # Principales Indicadores Actividad Económica 
 # Respecto al coeficiente de variación, si CV <= 0,15 aceptable; si 0,15 < CV <= 0,30 poco fiable
 # CV mayores a 0.30 estan sujetos a alta variabilidad muestral y error de estimación
@@ -104,6 +111,7 @@ ciuo <- svyby(~o+sexo, ~b1, svydsgn, svytotal, na.rm = TRUE, vartype="cv")
 ond2019_r10$b14_rev4cl_caenes
 ond2019_r10$categoria_ocupacion
 ond2019_r10$b1
+cv(fdt_s)
 
 # Opcionalmente se pueden exportar todos los resultados a un único archivo *.xlsx
 # *archivo de salida básico sin ajustes de estilo*
