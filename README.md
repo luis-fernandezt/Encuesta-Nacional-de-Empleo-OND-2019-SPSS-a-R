@@ -17,7 +17,7 @@ Luego, desde la planilla de cálculo se extrajo una serie de tablas:
 
 ### **Principales indicadores económicos:**
 
-#### • **Tabla 1: Los Lagos, situción de empleo de la población según sexo.**
+#### • **Tabla 1: Los Lagos, situación de empleo de la población según sexo.**
 
 |             OND2019             | Ambos sexos | Hombres |  Mujer  |
 |---------------------------------|:-----------:|:-------:|:-------:|
