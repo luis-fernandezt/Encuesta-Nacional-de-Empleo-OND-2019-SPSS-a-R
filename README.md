@@ -11,7 +11,6 @@ La encuesta caracteriza la población dentro y fuera del mercado del trabajo, pa
 #### • **Figura 1. Clasificación de la población dentro y fuera de la fuerza de trabajo en la ENE.**
 
 ![fig1](https://raw.githubusercontent.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/master/docs/fig1.png)
-
 Fuente: Elaboración propia.
 
 Luego, desde la planilla de cálculo se extrajo una serie de tablas:
