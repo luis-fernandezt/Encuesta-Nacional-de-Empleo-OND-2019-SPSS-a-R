@@ -8,13 +8,17 @@ Brevemente y según lo señalado en el manual metodológico de la encuesta, solo
 
 La encuesta caracteriza la población dentro y fuera del mercado del trabajo, para este ejercicio se tomó como referencia la décima región de Los Lagos, en específico al trimestre móvil octubre-diciembre 2019. De esta manera primero se presenta un organigrama con los principales resultados:
 
+#### • **Figura 1. Clasificación de la población dentro y fuera de la fuerza de trabajo en la ENE.**
+
 ![fig1](https://raw.githubusercontent.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/master/docs/fig1.png)
+
+Fuente: Elaboración propia.
 
 Luego, desde la planilla de cálculo se extrajo una serie de tablas:
 
 ### **Principales indicadores económicos:**
 
-#### * **Tabla 1: Los Lagos, situción de empleo de la población según sexo.**
+#### • **Tabla 1: Los Lagos, situción de empleo de la población según sexo.**
 
 |             OND2019             | Ambos sexos | Hombres |  Mujer  |
 |---------------------------------|:-----------:|:-------:|:-------:|
@@ -27,9 +31,9 @@ Luego, desde la planilla de cálculo se extrajo una serie de tablas:
 | Desocupados                     |    15,82    |   7,72  |   8,11  |
 | Inactivos                       |    326,53   |  123,96 |  202,57 |
 
-Fuente: Elaboración propia
+Fuente: Elaboración propia.
 
-#### **Tabla 2.  Los Lagos, principales tasas**
+#### • **Tabla 2.  Los Lagos, principales tasas**
 
 | OND2019                 | Ambos sexos | Hombres | Mujer  |
 |-------------------------|:-----------:|:-------:|:------:|
@@ -37,11 +41,11 @@ Fuente: Elaboración propia
 | Tasa de   ocupacion     | 56,5%       | 67,3%   | 45,1%  |
 | Tasa de   participación | 58,5%       | 69,2%   | 47,2%  |
 
-Fuente: Elaboración propia
+Fuente: Elaboración propia.
 
 ### Principales resultados de actividad económica:
 
-#### * **Tabla 3.  Los Lagos, clasificador de Actividades Económicas Nacional para Encuestas Sociodemográficas (CAENES)**
+#### • **Tabla 3.  Los Lagos, clasificador de Actividades Económicas Nacional para Encuestas Sociodemográficas (CAENES)**
 
 |                               OND2019                               | Ambos sexos |   cv   | Hombres |  cv  |  Mujer  |  cv  |
 |---------------------------------------------------------------------|:-----------:|:------:|:-------:|:----:|:-------:|:----:|
@@ -69,7 +73,7 @@ Fuente: Elaboración propia
 
 Fuente: Elaboración propia.
 
-#### * **Tabla 4.  Los Lagos, Clasificación Internacional de la Situación en el Empleo (CISE) 1993**
+#### • **Tabla 4.  Los Lagos, Clasificación Internacional de la Situación en el Empleo (CISE) 1993**
 
 |                      OND2019                     | Ambos sexos |  cv  | Hombres |  cv  |  Mujer  |  cv  |
 |--------------------------------------------------|:-----------:|:----:|:-------:|:----:|:-------:|:----:|
@@ -84,7 +88,7 @@ Fuente: Elaboración propia.
 
 Fuente: Elaboración propia.
 
-#### * **Tabla 5.  Los Lagos, Clasificación Internacional Uniforme de Ocupaciones CIUO -08**
+#### • **Tabla 5.  Los Lagos, Clasificación Internacional Uniforme de Ocupaciones CIUO -08**
 
 |                                     OND2019                                     | Ambos sexos |  cv  | Hombres |  cv  |  Mujer  |  cv  |
 |---------------------------------------------------------------------------------|:-----------:|:----:|:-------:|:----:|:-------:|:----:|
@@ -100,7 +104,7 @@ Fuente: Elaboración propia.
 | Ocupaciones   elementales                                                       |     8,95    | 0,06 |  60,97  | 0,07 |  42,13  | 0,08 |
 | Otros no   identificados                                                        |     8,95    | 0,44 |   1,77  | 0,44 |   0,15  | 0,79 |
 
-Elaboración propia.
+Fuente: Elaboración propia.
 
 #### **Versión de Rstudio:**
 "R version 3.6.3 (2020-02-29)"
