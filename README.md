@@ -1,7 +1,7 @@
 ## **Spss a R, y R a xlsx**
 En este repositorio puede encontrar un [Script](https://github.com/luis-fernandezt/Encuesta-Nacional-de-Empleo-OND-2019-SPSS-a-RStudio/blob/master/Script_ene_ond2019.R) en lenguaje **R**, el cual permitirá importar datos desde un archivo SPSS (.sav) hasta RStudio, y posteriormente exportar los resultados a una planilla de cálculo Excel (.xlsx) para su publicación, debido a que este último formato presenta mayor utilización por parte de los grupos de interés de esta información procesada. No se realizará ningún tipo de análisis de los resultados, ya que escapa del objetivo de este post.
 
-### **Análisis trimestre móvil OND2019 ENE . Región de Los Lagos, Chile**
+### **Análisis trimestre móvil OND2019 ENE, Región de Los Lagos, Chile**
 
 >Al analizar los datos se debe poner atención en aplicar factor de expansión a la muestra, y tener especial cuidado en que NO todos los resultados son consistentes estadísticamente, debido a que presentan altos coeficientes de variación.
 Brevemente y según lo señalado en el manual metodológico de la encuesta, solo aquellos valores con cv <= 0,15 son aceptables, mientras que aquellos con cv mayores están sujetos a alta variabilidad muestral y error de estimación, por lo cual deberían agruparse para mejorar este valor.
