@@ -19,7 +19,7 @@ Luego, desde la planilla de cálculo se extrajo una serie de tablas:
 
 #### • **Tabla 1: Los Lagos, situación de empleo de la población según sexo.**
 
-|             OND2019             | Ambos sexos | Hombres |  Mujer  |
+|             OND2019             | Ambos sexos | Hombres |  Mujeres  |
 |---------------------------------|:-----------:|:-------:|:-------:|
 |                                 |   (miles)   | (miles) | (miles) |
 | Población   total               |    969,99   |  496,29 |  473,70 |
@@ -34,7 +34,7 @@ Fuente: Elaboración propia.
 
 #### • **Tabla 2.  Los Lagos, principales tasas**
 
-| OND2019                 | Ambos sexos | Hombres | Mujer  |
+| OND2019                 | Ambos sexos | Hombres | Mujeres  |
 |-------------------------|:-----------:|:-------:|:------:|
 | Tasa de   desocupación  | 3,4%        | 2,8%    | 4,5%   |
 | Tasa de   ocupacion     | 56,5%       | 67,3%   | 45,1%  |
@@ -46,7 +46,7 @@ Fuente: Elaboración propia.
 
 #### • **Tabla 3.  Los Lagos, clasificador de Actividades Económicas Nacional para Encuestas Sociodemográficas (CAENES)**
 
-|                               OND2019                               | Ambos sexos |   cv   | Hombres |  cv  |  Mujer  |  cv  |
+|                               OND2019                               | Ambos sexos |   cv   | Hombres |  cv  |  Mujeres  |  cv  |
 |---------------------------------------------------------------------|:-----------:|:------:|:-------:|:----:|:-------:|:----:|
 |                                                                     |   (miles)   |        | (miles) |      | (miles) |      |
 | Agricultura,   ganadería, silvicultura y pesca                      |    74,63    |  0,06  |  64,90  | 0,06 |   9,73  | 0,12 |
@@ -74,7 +74,7 @@ Fuente: Elaboración propia.
 
 #### • **Tabla 4.  Los Lagos, Clasificación Internacional de la Situación en el Empleo (CISE) 1993**
 
-|                      OND2019                     | Ambos sexos |  cv  | Hombres |  cv  |  Mujer  |  cv  |
+|                      OND2019                     | Ambos sexos |  cv  | Hombres |  cv  |  Mujeres  |  cv  |
 |--------------------------------------------------|:-----------:|:----:|:-------:|:----:|:-------:|:----:|
 |                                                  |   (miles)   |      | (miles) |      | (miles) |      |
 | Empleador                                        |    21,36    | 0,12 |  13,26  | 0,14 |   8,09  | 0,19 |
@@ -89,7 +89,7 @@ Fuente: Elaboración propia.
 
 #### • **Tabla 5.  Los Lagos, Clasificación Internacional Uniforme de Ocupaciones CIUO -08**
 
-|                                     OND2019                                     | Ambos sexos |  cv  | Hombres |  cv  |  Mujer  |  cv  |
+|                                     OND2019                                     | Ambos sexos |  cv  | Hombres |  cv  |  Mujeres  |  cv  |
 |---------------------------------------------------------------------------------|:-----------:|:----:|:-------:|:----:|:-------:|:----:|
 |                                                                                 |   (miles)   |      | (miles) |      | (miles) |      |
 | Directores,   gerentes y administradores                                        |     8,95    | 0,21 |   6,85  | 0,22 |   2,10  | 0,29 |
